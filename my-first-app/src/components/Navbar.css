@@ -1,0 +1,37 @@
+header {
+    background-color: #f9f8f9;
+}
+
+.NavBar {
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 0 3px #797979;
+    border-bottom: 1px solid #eaeaea;
+    top: 0;
+    background-color: #F28F5A;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 1.5em;
+    color: #1a0683;
+
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.logo {
+    height: 7rem;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 1em #646cff88);
+
+}
