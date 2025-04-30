@@ -169,6 +169,26 @@
    outline: 4px auto var(--accent-color);
  }
 
+
+/* ===================================
+     FORMS
+  =================================== */
+
+ .form{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  
+ 
+ }
+
+
+
+
+
+
+
  /* ===================================
      RESPONSIVE DESIGN
   =================================== */

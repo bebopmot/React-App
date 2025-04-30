@@ -1,6 +1,6 @@
 function Footer(){
     return( <div className = "Footer">
-    <footer>Footer</footer>
+    <footer>Loop Troop 2025</footer>
     </div>
     )}
     

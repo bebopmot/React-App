@@ -7,6 +7,7 @@ import NavBar from './components/NavBar'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 import About from './pages/About'
+import AddProduct from './pages/AddProduct'
 import { Route, Routes } from "react-router-dom";
 
 
@@ -27,6 +28,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/productdetail/:productId" element={<ProductDetailPage />} />
             <Route path="*" element={<h1>Page Not Found</h1>} />
+            
+            <Route path="/addProduct" element={<AddProduct callbackToCreate={AddProduct} />} />
           </Routes>
         </main>
       </div>
