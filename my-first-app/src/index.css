@@ -1,90 +1,191 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+ /* ===================================
+   THEME ROOT VARIABLES
+=================================== */
+ :root {
+   --primary-color: #1C1C1E;
+   --secondary-color: #F5F5F7;
+   --accent-color: #ffc935;
+   --highlight-color: #333333;
+   --background-color: #FFFFFF;
+   --text-color: #333333;
+   --font-family-main: 'Poppins', sans-serif;
+ }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+ /* ===================================
+   RESET DE BASE
+=================================== */
+ html,
+ body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: var(--font-family-main);
+   background-color: var(--background-color);
+   color: var(--text-color);
+ }
 
-a {
-  font-weight: 500;
-  color: #000000;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+ /* ===================================
+   WRAPPER GENERAL
+=================================== */
+ .content-wrapper {
+   display: flex;
+   margin: 0;
+ }
 
+ /* ===================================
+   SIDEBAR
+=================================== */
+ .SideBar {
+   background-color: var(--primary-color);
+   color: #FFFFFF;
+   letter-spacing: 0.5px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 15vw;
+   min-width: 200px;
+   padding: 2rem 1rem;
+ }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+ /* ===================================
+   MAIN CONTENT
+=================================== */
+ .main-content {
+   flex: 1;
+   padding: 1rem;
+   background-color: var(--background-color);
+   overflow-y: auto;
+ }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+ /* ===================================
+   FOOTER
+=================================== */
+ .Footer {
+   background-color: var(--secondary-color);
+   width: 100%;
+   min-height: 10vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-end;
+   font-size: 1.5em;
+   color: var(--primary-color);
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   border-top: 1px solid #9b9b9b;
+   margin: 0;
+ }
 
-header {
-  background-color: #2a7ffd	;
-  width: 100vw;
-  height: fit-content;
-  align-items: center;
-}
+ /* ===================================
+     PRODUCT CARD BODY
+  =================================== */
+ .card-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   border: 1px solid #d8d8d8;
+   margin: 20px 20px;
+   border-radius: 7px;
+   background-color: var(--background-color);
+   padding: 1rem;
+   gap: 1rem;
+ }
 
-.NavBar {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  width: auto;
+ /* ===================================
+     TITLE AND DESCRIPTION
+  =================================== */
+ .title-and-description {
+   text-align: justify;
+   font-size: 18px;
+   border: 1px solid gray;
+   padding: 1rem;
+ }
 
-}
+ /* ===================================
+     TAG AND PRICE (Category + Availability)
+  =================================== */
+ .tag-and-price {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 1px solid #1a1616;
+   padding: 1rem;
+   background-color: var(--highlight-color);
+   color: white;
+ }
 
-.logo {
-  width: auto;
-  height: auto;
-}
+ /* ===================================
+     PRODUCT PRICE
+  =================================== */
+ .product-price {
+   display: flex;
+   flex-direction: column;
+   width: auto;
+   padding: 10px 20px;
+   border-radius: 12px;
+   font-family: inherit;
+   background-color: var(--highlight-color);
+   color: #ffffff;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ }
 
-.Footer{
-  background-color: #2a7ffd	;
-  width: 100vw;
-  height: fit-content;
-  display: flex;
-  flex-direction:row ;
-  justify-content: center;
-  align-items: flex-end;
-  min-height: 10vh;
-}
+ /* ===================================
+     BUTTON CONTAINER
+  =================================== */
+ .button-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 1rem;
+   padding: 1rem;
+   border-top: 1px solid gray;
+ }
 
-.SideBar{
-  background-color: #e8ecf0	;
-  box-shadow: 5px 0px 2px rgb(172, 172, 172);
-  display: flex;
-  flex-direction:column;
-align-items: flex-start;
-width: 10vw;
-height: 100vh;
-margin: 0;
-padding: 0;
-}
+ /* ===================================
+     ACTION BUTTONS
+  =================================== */
+ .button-container button {
+   border-radius: 12px;
+   border: none;
+   padding: 10px 20px;
+   font-family: inherit;
+   background-color: var(--accent-color);
+   color: white;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ }
 
+ .button-container button:hover {
+   background-color: #e85c5c;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+ }
 
+ .button-container button:focus,
+ .button-container button:focus-visible {
+   outline: 4px auto var(--accent-color);
+ }
+
+ /* ===================================
+     RESPONSIVE DESIGN
+  =================================== */
+ @media (max-width: 768px) {
+   .card-body {
+     flex-direction: column;
+     align-items: center;
+     max-width: 90%;
+     margin: 20px auto;
+   }
+
+   .button-container {
+     flex-direction: column;
+   }
+
+   .tag-and-price {
+     flex-direction: column;
+     gap: 0.5rem;
+   }
+ }
