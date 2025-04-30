@@ -4,9 +4,10 @@ function NavBar() {
 
     return (
         <div className="NavBar">
+            <h1>Fun Store</h1>
             <img className="logo" src="./src/assets/Free.svg" />
 
-            <h1>Fun Store</h1>
+
 
         </div>
     )

@@ -1,5 +1,5 @@
 header {
-    background-color: #f9f8f9;
+    background-color: #faf4ba;
 }
 
 .NavBar {
@@ -9,15 +9,14 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 0 3px #797979;
-    border-bottom: 1px solid #eaeaea;
     top: 0;
-    background-color: #F28F5A;
+    background: #ffdf53;
     z-index: 10;
 }
 
 h1 {
     font-size: 1.5em;
-    color: #1a0683;
+    color: #2B3A67;
 
     font-weight: 600;
     margin: 0;

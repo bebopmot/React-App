@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard"; // ✅ nécessaire si tu l'utilises
 
 function ProductList() {
     const [productListDisplay, setProductListDisplay] = useState(products);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     const deleteProduct = (productDeletedId) => {
         const newList = productListDisplay.filter((product) => {
@@ -17,6 +18,9 @@ function ProductList() {
         setProductListDisplay(newList);
     };
 
+
+
+
     return (
         <div>
             {productListDisplay.map((productObj) => (
@@ -26,7 +30,15 @@ function ProductList() {
                     callbackToDelete={deleteProduct}
                 />
             ))}
+
+
+
+
+
         </div>
+
+
+
     );
 }
 
