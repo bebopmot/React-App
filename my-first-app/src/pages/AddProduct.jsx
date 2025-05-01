@@ -34,57 +34,50 @@ function AddProduct({ callbackToCreate }) {
 
 
     return (
-        <div className="card-body">
-            <form onSubmit={handleSubmit} className="product-form" >
+        <div className="card-body-form">
+            <form onSubmit={handleSubmit} className="product-form">
                 <h2>Add a Product</h2>
 
-                <label>
-                    Name: <input
-                        type="text"
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    ></input>
-                </label>
+                <input
+                    type="text"
+                    placeholder="Name"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                />
 
-                <label>
-                    Price: <input
-                        type="text"
-                        value={price}
-                        onChange={(e) => setPrice(e.target.value)}
-                    ></input>
-                </label>
+                <input
+                    type="text"
+                    placeholder="Price"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                />
 
-                <label>
-                    Description <input
-                        type="text"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                    ></input>
-                </label>
+                <input
+                    type="text"
+                    placeholder="Description"
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                />
 
-                <label>
-                    Category <input
-                        type="text"
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                    ></input>
-                </label>
+                <input
+                    type="text"
+                    placeholder="Category"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                />
 
+                <input
+                    type="text"
+                    placeholder="Rating"
+                    value={rating}
+                    onChange={(e) => setRating(e.target.value)}
+                />
 
-                <label>
-                    Rating :<input
-                        type="text"
-                        value={rating}
-                        onChange={(e) => setRating(e.target.value)}
-                    ></input>
-                </label>
-
-                <div className="button" ><button type="submit">Submit</button> </div>
-
+                <div className="button">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
-
-        </div>
-    );
-}
+        </div>)
+};
 
 export default AddProduct;
