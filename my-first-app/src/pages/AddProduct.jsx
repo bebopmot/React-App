@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; //on a vu avec le prof aujourd'hui
 
 function AddProduct({ callbackToCreate }) {
+
     const [title, setTitle] = useState("");
     const [price, setPrice] = useState("");
     const [description, setDescription] = useState("");

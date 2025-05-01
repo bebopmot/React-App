@@ -1,39 +1,41 @@
 import { Link } from "react-router-dom";
 
 function ProductCard({ productDetails, callbackToDelete }) {
-    const { id, title, price, category, availabilityStatus, description } = productDetails;
+    const { id, title, price, category, availabilityStatus, description, images } = productDetails;
 
     return (
         <div className="card-body">
-            <div className="title-and-description">
-                <h3>{title}</h3>
-                <p>{description}</p>
-
-                <div className="tag-and-price">
-                    <div className="tag">
-                        <div className="button"><button> <p><strong>Category :</strong> {category}</p></button></div>                </div>
-                    <div className="availability">
-                        {availabilityStatus === "Out of Stock" ? (
-                            <p><strong>Status :</strong>  {availabilityStatus}❌</p>
-                        ) : (
-                            <p><strong>Status :</strong> {availabilityStatus} ✔️</p>
-                        )}
-                    </div>
+            <div className="text-image-container">
+                <div className="image-container">
+                    <img className="image" src={images} alt={title} />
                 </div>
-
-
-                <div className="button"><button><strong> </strong> {price} €</button></div>
+                <div className="text-container">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                </div>
             </div>
-            <div className="button-container">
-                {/*   Lien vers la page de détails */}
-                <Link to={`/productdetail/${id}`}>
-                    <button>Details</button>
-                </Link>
 
-                {/*   Supprimer */}
-                <button onClick={() => callbackToDelete(id)}>Delete</button>
+            <div className="price-and-avail">
+                <div className="price-button">{price} €</div>
+                <div className="availability">
+                    {availabilityStatus === "Out of Stock"
+                        ? `${availabilityStatus} ❌`
+                        : availabilityStatus === "Low Stock"
+                            ? `${availabilityStatus} ⚠️`
+                            : `${availabilityStatus} ✅`}
+                </div>
+            </div>
+
+            <div className="button-container">
+                <Link to={`/productdetail/${id}`}>
+                    <button className="button-detail">Details</button>
+                </Link>
+                <button className="button-delete" onClick={() => callbackToDelete(id)}>
+                    Delete
+                </button>
             </div>
         </div>
+
     );
 }
 

@@ -8,7 +8,7 @@
    --highlight-color: #333333;
    --background-color: #FFFFFF;
    --text-color: #333333;
-   --font-family-main: 'Poppins', sans-serif;
+
  }
 
  /* ===================================
@@ -19,7 +19,7 @@
    margin: 0;
    padding: 0;
    overflow-x: hidden;
-   font-family: var(--font-family-main);
+   font-family: 'Poppins', sans-serif;
    background-color: var(--background-color);
    color: var(--text-color);
  }
@@ -58,7 +58,7 @@
  }
 
  .sidebar-link:hover {
-   color: #ffc935;
+   color: #6e95ff;
 
  }
 
@@ -97,33 +97,106 @@
  .card-body {
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
-   border: 1px solid #d8d8d8;
+   justify-content: space-between;
+   border: 1px solid #e0e0e0;
    margin: 20px 20px;
-   border-radius: 7px;
-   background-color: #fff6df;
-   ;
-   padding: 1rem;
+   border-radius: 12px;
+   background-color: #ffffff;
+   padding: 1.5rem;
    gap: 1rem;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+   transition: transform 0.2s ease;
+ }
+
+ .card-body:hover {
+   transform: scale(1.02);
+
+ }
+
+ #category-button {
+   display: flex;
+   justify-content: flex-end;
+
+ }
+
+ .image-container {
+   flex: 1 1 150px;
+   max-width: 200px;
+ }
+
+ .image {
+   width: 100%;
+   border-radius: 8px;
+   object-fit: cover;
+   border: none;
+
+ }
+
+ .button-style {
+
+   text-align: center;
+   border: 1px solid #6e95ff;
+   background-color: #6e95ff;
+   margin: 10px;
+   padding: 3px;
+   border-radius: 12px;
+   width: 80px;
+   font-weight: 600;
+
+   letter-spacing: 0.3px;
+ }
+
+ .price-button {
+   display: flex;
+   justify-content: flex-end;
+   font-weight: 700;
+   font-size: larger;
+   letter-spacing: 0.3px;
  }
 
  /* ===================================
      TITLE AND DESCRIPTION
   =================================== */
- .title-and-description {
-   text-align: justify;
+ .text-image-container {
+   display: flex;
+   justify-content: space-between;
+   gap: 1rem;
    font-size: 18px;
-   padding: 1rem;
+   flex-wrap: wrap;
+ }
+
+ .text-container {
+
+   flex: 2;
+ }
+
+ .text-container h3 {
+   font-size: 1.2rem;
+   color: #222;
+   margin: 0;
+ }
+
+ .text-container p {
+   font-size: 0.95rem;
+   color: #555;
+   margin-top: 0.5rem;
+   line-height: 1.4;
  }
 
  /* ===================================
      TAG AND PRICE (Category + Availability)
   =================================== */
- .tag-and-price {
 
+
+ .price-and-avail {
+   display: flex;
    justify-content: space-between;
-
-
+   align-items: center;
+   font-size: 1rem;
+   font-weight: 600;
+   padding: 0.5rem 0;
+   border-top: 1px solid #eee;
+   border-bottom: 1px solid #eee;
  }
 
  /* ===================================
@@ -158,45 +231,45 @@
  /* ===================================
      ACTION BUTTONS
   =================================== */
-
- button {
-   border-radius: 12px;
-   border: none;
-   padding: 5px auto;
-   font-family: inherit;
-   background-color: var(--highlight-color);
-   color: white;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ .button-delete {
+   background-color: #272727;
  }
 
- .button-container button:hover {
-   background-color: #e85c5c;
- }
-
- .button-container button {
-   border-radius: 12px;
-   border: none;
-   padding: 10px 20px;
-   font-family: inherit;
-   background-color: #ffc935;
-   color: white;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
- }
-
- .button-container button:hover {
-   background-color: #e85c5c;
+ .button-delete:hover {
+   background-color: #d40000;
    transform: translateY(-2px);
    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
  }
 
- .button-container button:focus,
- .button-container button:focus-visible {
-   outline: 4px auto #ffc935;
+ .button-container {
+   border-radius: 12px;
+   border: none;
+   padding: 10px 20px;
+   font-family: inherit;
+   cursor: pointer;
+   transition: all 0.3s ease;
  }
+
+ button {
+   border-radius: 12px;
+   border: none;
+   padding: 10px 20px;
+   font-family: inherit;
+   background-color: #6e95ff;
+   color: white;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ }
+
+ .button-detail:hover {
+   background-color: #ffd665;
+   transform: translateY(-2px);
+   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+ }
+
+
+
 
  /* ===================================
      RESPONSIVE DESIGN
@@ -213,8 +286,11 @@
      flex-direction: column;
    }
 
-   .tag-and-price {
-     flex-direction: column;
-     gap: 0.5rem;
+   .description-center {
+     text-align: center;
+   }
+
+   .image {
+     max-width: 90%;
    }
  }

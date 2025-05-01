@@ -11,6 +11,8 @@ import ProductDetailPage from './pages/ProductDetailPage';
 import AddProduct from './pages/AddProduct';
 import About from './pages/About';
 
+
+
 function App() {
   const [productList, setProductList] = useState(productsData);
 
