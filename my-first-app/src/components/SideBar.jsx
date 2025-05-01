@@ -2,9 +2,9 @@ import { Routes, Route, Link, NavLink } from "react-router-dom";
 
 function SideBar() {
     return (<div className="SideBar">
-        <Link to="/" >   <h3>Products</h3></Link>
-        <h3>Add Product</h3>
-        <Link to="/about" ><h2>About </h2></Link>
+        <Link to="/" className="sidebar-link">   <h3>Products</h3></Link>
+        <Link to="/addProduct" className="sidebar-link"><h3>Add Product</h3></Link>
+        <Link to="/about" className="sidebar-link"><h3>About </h3></Link>
 
     </div>
     )

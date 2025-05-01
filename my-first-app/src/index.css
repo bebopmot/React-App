@@ -4,7 +4,7 @@
  :root {
    --primary-color: #1C1C1E;
    --secondary-color: #F5F5F7;
-   --accent-color: #ffc935;
+
    --highlight-color: #333333;
    --background-color: #FFFFFF;
    --text-color: #333333;
@@ -37,7 +37,7 @@
 =================================== */
  .SideBar {
    background-color: var(--primary-color);
-   color: #FFFFFF;
+
    letter-spacing: 0.5px;
    display: flex;
    flex-direction: column;
@@ -45,6 +45,21 @@
    width: 15vw;
    min-width: 200px;
    padding: 2rem 1rem;
+ }
+
+ .sidebar-link {
+   text-decoration: none;
+
+   color: var(--secondary-color);
+
+   font-weight: bold;
+   padding: 8px;
+   display: block;
+ }
+
+ .sidebar-link:hover {
+   color: #ffc935;
+
  }
 
  /* ===================================
@@ -86,7 +101,8 @@
    border: 1px solid #d8d8d8;
    margin: 20px 20px;
    border-radius: 7px;
-   background-color: var(--background-color);
+   background-color: #fff6df;
+   ;
    padding: 1rem;
    gap: 1rem;
  }
@@ -97,7 +113,6 @@
  .title-and-description {
    text-align: justify;
    font-size: 18px;
-   border: 1px solid gray;
    padding: 1rem;
  }
 
@@ -105,13 +120,10 @@
      TAG AND PRICE (Category + Availability)
   =================================== */
  .tag-and-price {
-   display: flex;
+
    justify-content: space-between;
-   align-items: center;
-   border: 1px solid #1a1616;
-   padding: 1rem;
-   background-color: var(--highlight-color);
-   color: white;
+
+
  }
 
  /* ===================================
@@ -124,8 +136,8 @@
    padding: 10px 20px;
    border-radius: 12px;
    font-family: inherit;
-   background-color: var(--highlight-color);
-   color: #ffffff;
+   background-color: #e85c5c;
+   color: #1f1111;
    cursor: pointer;
    transition: all 0.3s ease;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -146,12 +158,29 @@
  /* ===================================
      ACTION BUTTONS
   =================================== */
+
+ button {
+   border-radius: 12px;
+   border: none;
+   padding: 5px auto;
+   font-family: inherit;
+   background-color: var(--highlight-color);
+   color: white;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+ }
+
+ .button-container button:hover {
+   background-color: #e85c5c;
+ }
+
  .button-container button {
    border-radius: 12px;
    border: none;
    padding: 10px 20px;
    font-family: inherit;
-   background-color: var(--accent-color);
+   background-color: #ffc935;
    color: white;
    cursor: pointer;
    transition: all 0.3s ease;
@@ -166,7 +195,7 @@
 
  .button-container button:focus,
  .button-container button:focus-visible {
-   outline: 4px auto var(--accent-color);
+   outline: 4px auto #ffc935;
  }
 
  /* ===================================

@@ -1,47 +1,21 @@
-import products from "../data/products.json";
-import { useState } from "react";
-import ProductCard from "./ProductCard"; // ✅ nécessaire si tu l'utilises
+import ProductCard from './ProductCard';
 
-function ProductList() {
-    const [productListDisplay, setProductListDisplay] = useState(products);
-    const [selectedProduct, setSelectedProduct] = useState(null);
-
-    const deleteProduct = (productDeletedId) => {
-        const newList = productListDisplay.filter((product) => {
-            if (product.id !== productDeletedId) {
-                return true;
-            } else {
-                return false;
-            }
-        });
-
-        setProductListDisplay(newList);
-    };
-
-
-
-
+function ProductList({ productsArr, callbackToDelete }) {
     return (
-        <div>
-            {productListDisplay.map((productObj) => (
+        <section className="product-list">
+            <h2>List of Products</h2>
+
+            {productsArr.length === 0 && <p>Aucun produit à afficher.</p>}
+
+            {productsArr.map((productObj) => (
                 <ProductCard
                     key={productObj.id}
                     productDetails={productObj}
-                    callbackToDelete={deleteProduct}
+                    callbackToDelete={callbackToDelete}
                 />
             ))}
-
-
-
-
-
-        </div>
-
-
-
+        </section>
     );
 }
 
 export default ProductList;
-
-

@@ -10,7 +10,7 @@ function ProductDetailPage() {
     return (
         <div>
             <h2>{product.name}</h2>
-            <p>Prix : {product.price} €</p>
+            <p>Price : {product.price} €</p>
 
             <p>Description : {product.description}</p>
             <p>Category : {product.category}</p>

@@ -1,48 +1,39 @@
-import React from "react";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-function ProductCard(props) {
-    const product = props.productDetails;
+function ProductCard({ productDetails, callbackToDelete }) {
+    const { id, title, price, category, availabilityStatus, description } = productDetails;
 
     return (
         <div className="card-body">
-
             <div className="title-and-description">
-                <h2>{product.title}</h2>
-                <p>{product.description}</p>
-            </div>
+                <h3>{title}</h3>
+                <p>{description}</p>
 
-            <div className="tag-and-price">
-                <div className="tag">
-                    <h3>{product.category}</h3>
+                <div className="tag-and-price">
+                    <div className="tag">
+                        <div className="button"><button> <p><strong>Category :</strong> {category}</p></button></div>                </div>
+                    <div className="availability">
+                        {availabilityStatus === "Out of Stock" ? (
+                            <p><strong>Status :</strong>  {availabilityStatus}❌</p>
+                        ) : (
+                            <p><strong>Status :</strong> {availabilityStatus} ✔️</p>
+                        )}
+                    </div>
                 </div>
-                <div className="availability">
-                    {product.availabilityStatus === "Out of Stock" ? (
-                        <p>❌</p>
-                    ) : (
-                        <p>✔️</p>
-                    )}
-                </div>
-            </div>
 
+
+                <div className="button"><button><strong> </strong> {price} €</button></div>
+            </div>
             <div className="button-container">
-                <span className="product-price">
-                    <h3>{product.price} $</h3>
-                </span>
+                {/*   Lien vers la page de détails */}
+                <Link to={`/productdetail/${id}`}>
+                    <button>Details</button>
+                </Link>
 
-                <div className="actions">
-                    <button onClick={() => props.callbackToDelete(product.id)}>
-                        Delete
-                    </button>
-
-                    <Link to={`/productdetail/${product.id}`}>
-                        <button>Details</button>
-                    </Link>
-                </div>
+                {/*   Supprimer */}
+                <button onClick={() => callbackToDelete(id)}>Delete</button>
             </div>
         </div>
-
     );
 }
 
